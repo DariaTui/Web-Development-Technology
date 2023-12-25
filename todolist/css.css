@@ -1,0 +1,243 @@
+*{
+    box-sizing: border-box;
+}
+
+html,body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.todo-list{
+    min-height: 100%;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    grid-gap: 15px;
+    margin-right: 15px;
+}
+.card-form {
+    background:white;
+    box-shadow: 0px 0px 6px rgb(54, 54, 54);
+    padding: 32px 15px;
+ 
+}
+h1 {
+    margin: 5px 0;
+    color: rgb(72, 72, 72);
+}
+
+
+
+ul,li{
+
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+.div-task{
+display: inline-block;
+}
+
+
+.task2{
+    margin-top: 10px;
+    display: flex;
+}
+.task{
+    background: #e0e5ea;
+    margin-top: 10px;
+    display: flex;
+}
+/*кнопки редактирования и удаления задач*/
+
+.task-item__buttons {
+    margin-left: auto;
+  }
+
+.task-title--done {
+    text-decoration: line-through;
+    color: #4f4f4f;
+  }
+ 
+.btn-action {
+    background-color: #e0e5ea;
+    padding: 8px 10px;
+    cursor: pointer;
+    border: 0;
+    border-radius: 4px;
+    transition: opacity 0.2s ease-in;
+    opacity: 0.5;
+    
+  /*  display: flex;
+    justify-content: left;
+    align-items: left;*/
+}
+
+.btn-action:hover {
+    background-color: #e0e5ea;
+    opacity: 1;
+}
+
+.btn-action img {
+  pointer-events: none;
+}
+
+.task-title{
+    font-weight: 400;
+    font-size: large;
+    
+    width: 5px;
+    padding-left: 0px;
+}
+b{
+    margin-top:9px;
+    margin-left: 10px;
+}
+
+
+/* чекбоксы*/ 
+.option {
+    display: block;
+    margin-bottom: 0.5em;
+    margin-left:5px;
+    margin-right:15px;
+    margin-top:7px;
+}
+
+/* Check */
+
+.check {
+    padding-left: 1.2em;
+}
+
+.check__input {
+    position: absolute;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.check__box {
+    position: absolute;
+    margin-left: -1.2em;
+    width: 20px;
+    height: 20px;
+    background-image: url(img/cub.png);
+}
+
+/* Checked */
+
+.check__input:checked + .check__box {
+    background-image: url(img/cubgalka.png);
+}
+
+
+
+/* Disabled */
+
+.check__input:disabled + .check__box {
+    background-image: url(img/cub.png);
+}
+
+.check__input:checked:disabled + .check__box {
+    background-image: url(img/cub.png);
+}
+p{
+    color: grey;
+}
+
+/*form*/
+form{
+    display: block;
+    position: fixed; /* Фиксированное положение */
+    right: 30px; /* Расстояние от правого края окна браузера */
+    top: 5%; /* Расстояние сверху */
+    padding: 10px; 
+}
+
+.card-result{
+    padding: 78px 15px 0;
+}
+.card{
+    width: 445px;
+    height: 268px;
+    background:white;
+    box-shadow: 0px 6px 12px #00000029;
+    border: 1px solid #707070A8;
+    border-radius: 6px;
+    padding: 22px;
+}
+.div-form{
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 10px;
+}
+.form-text{
+    display:block;
+    padding-top:10px;
+    padding-bottom: 10px;
+}
+
+.form_text_input{
+    width: 100%;
+}
+.text_form-checkbox{
+    color: rgb(73, 73, 73);
+}
+
+.check_form {
+    padding-left: 1em;
+}
+
+.form_check__input {
+    position: absolute;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.form_check__box {
+    position: absolute;
+    margin-left: -1.2em;
+    width: 20px;
+    height: 20px;
+    background-image: url(img/cub.png);
+}
+.form_check__input:checked + .form_check__box {
+    background-image: url(img/cubgalka.png);
+}
+
+/*кнопка форма*/
+.button-form{
+    margin-top: 10px;
+}
+.btn-form{
+border-radius: 30px;
+height: 30px;
+}
+
+.btn-form-del{
+    background: white;
+    color: gray;
+    border: 2px solid gray;
+    margin: 10px;
+    cursor: pointer;
+    
+}
+.btn-form-del:hover {
+    background: rgb(91, 91, 91);
+    transform: translate(0, 0.25em);
+  }
+.btn-form-safe{
+    background:rgb(109, 109, 255);
+    color: white;
+    border: 2px solid rgb(109, 109, 255);
+    margin: 10px; 
+    cursor: pointer;  
+}
+
+.btn-form-safe:hover {
+    background: rgba(0, 0, 255, 0.306);
+    transform: translate(0, 0.25em);
+  }
