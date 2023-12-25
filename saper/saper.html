@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сапёр</title>
+    <link rel="stylesheet" href="saper.css">
+    
+</head>
+<body>
+    <div class="datas">
+    <label class='text'>Укажите количество бомб</label>
+        <input class='text amountBomb' type="text" maxlength="2" value ='15'>
+
+        <button type="submit" class="btn-form text " onclick="alerted();">
+            Добавить
+        </button>
+    </div>
+
+    <div class="field"></div>
+    <div class="restart"><button href="#" onclick="parent.location.reload(); return false;">
+        Начать заново
+    </button></div>
+    <script src="saper.js"></script>
+</body>
+</html>

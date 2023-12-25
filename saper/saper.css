@@ -1,0 +1,55 @@
+.field{
+    display: grid;
+    grid-template-columns: repeat(12,40px);
+    grid-gap: 8px;
+    
+    
+}
+
+button{
+    height: 40px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+button:hover{
+    outline: solid 2px blue;
+}
+
+.restart button{
+    margin:90px;
+    border-radius: 100px;
+    border:rgb(128, 128, 128);
+    width: 300px;
+    background-color: rgb(148, 148, 148);
+    color:azure;
+}
+.restart button:hover{
+    outline: solid 2px rgb(134, 134, 134);
+    background-color: rgb(89, 89, 89);
+}
+.amountBomb{
+    width: 50px;
+}
+.text{
+    margin-left: 5px;
+    font-size: 20px;
+}
+.datas{
+    margin: 20px 20px;
+}
+.btn-form{
+    width: fit-content;
+    height: fit-content;
+    border-radius: 100px;
+    border:rgb(128, 128, 128);
+    width: 200px;
+    height: 40px;
+    background-color: rgb(148, 148, 148);
+    color:azure;
+}
+
+.btn-form:hover{
+    outline: solid 2px rgb(134, 134, 134);
+    background-color: rgb(89, 89, 89);
+}
