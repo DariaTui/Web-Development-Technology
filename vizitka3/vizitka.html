@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <div class="card-container">
+        <div class="card-form">
+            <h1>Конструктор визиток</h1>
+            <form onsubmit="drawCard(this); return false">
+                <label>Название организации</label>
+                <input type="text" name="organization" value="ООО &quot;Ориентир&quot;">
+                
+                <label>ФИО</label>
+                <!--Радио кнопки место шрифта Name-->
+                <div class="radFio">
+                <input type="text" name="fio" value="Фёдoров Иван Семенович">
+                <div class="radio radioName">
+                    <label>
+                        <input type="radio"  name="n" value="left" id='left'/>
+                        <img src="img/left.svg">
+                    </label>
+                    <label class="middle">
+                        <input type="radio" name="n" value="middle" id="middle" checked/>
+                        <img src="img/middle.svg">
+                    </label>
+                    <label class="right">
+                        <input type="radio" name="n" id="right" value="right"/>
+                        <img src="img/right.svg">
+                    </label>
+                    </div>
+                <div class="radio radioNameSize">
+                    <label>
+                        <input type="radio"  name="sn" value="24px" id='24N'/>
+                        <img src="img/24px.jpg">
+                    </label>
+                    <label class="middle">
+                        <input type="radio" name="sn" value="26px" id="26N" checked/>
+                        <img src="img/26px.jpg">
+                    </label>
+                    <label class="right">
+                        <input type="radio" name="sn"  value="28px" id="28N"/>
+                        <img src="img/28px.jpg">
+                    </label>
+                    </div>
+                </div>
+                <div class="color">
+                    <label>
+                        <input type="radio"  name="cn" value="black" id='black' checked/>
+                        <img src="img/black.jpg">
+                    </label>
+                    <label>
+                        <input type="radio" name="cn" value="blue" id="blue"/>
+                        <img src="img/blue.jpg">
+                    </label>
+                    <label>
+                        <input type="radio" name="cn"  value="pink" id="pink"/>
+                        <img src="img/pink.jpg">
+                    </label>
+                    <label>
+                        <input type="radio" name="cn"  value="yellow" id="yellow"/>
+                        <img src="img/yellow.jpg">
+                    </label>
+                </div>
+                <!--Радио кнопки для  Position-->
+                <label>Должность</label>
+                <div class="radioPos">
+                    <input type="text" name="position" value="Менеджер по развитию">
+                    <div class="radPosition">
+                    <label>
+                        <input type="radio"  name="p" value="left" id='leftP'/>
+                        <img src="img/left.svg">
+                    </label>
+                    <label class="middle">
+                        <input type="radio" name="p" value="middle" id="middleP" checked/>
+                        <img src="img/middle.svg">
+                    </label>
+                    <label class="right">
+                        <input type="radio" name="p"  value="rightP" id="rightP"/>
+                        <img src="img/right.svg">
+                    </label>
+                    </div>
+
+                    <div class="radPositionSize">
+                    <label>
+                        <input type="radio"  name="sp" value="14px" id='14P'/>
+                        <img src="img/14px.jpg">
+                    </label>
+                    <label class="middle">
+                        <input type="radio" name="sp" value="16px" id="16P" checked/>
+                        <img src="img/16px.jpg">
+                    </label>
+                    <label class="right">
+                        <input type="radio" name="sp"  value="18px" id="18P"/>
+                        <img src="img/18px.jpg">
+                    </label>
+                    </div>
+                    </div>
+                    <div class="color">
+                        <label>
+                            <input type="radio"  name="cp" value="black" checked/>
+                            <img src="img/black.jpg">
+                        </label>
+                        <label>
+                            <input type="radio" name="cp" value="darkgrey" id="darkgrey"/>
+                            <img src="img/dark-grey.jpg">
+                        </label>
+                        <label>
+                            <input type="radio" name="cp"  value="grey" id="grey"/>
+                            <img src="img/grye.jpg">
+                        </label>
+                        <label>
+                            <input type="radio" name="cp"  value="lightgrey" id="lightgrey"/>
+                            <img src="img/light-grey.jpg">
+                        </label>
+                    </div>
+                
+                <label>Телефон</label>
+                <input type="text" name="phone" value="8 (999) 123-45-67">
+                <label>Почта</label>
+                <div class="show">
+                <input type="text" name="email" value="fedorov.is@orientir.org">
+                <div class="showbtn">
+                <input type="checkbox" id="hider" name="scales" checked>
+                <label for="scales">Отображать</label>
+                </div>
+                </div>
+                <label>Адрес</label>
+                <div class="show">
+                <input type="text" name="address" value="Иркутск, Байкальская, 421, оф. 12">
+                <div class="showbtn">
+                    <input type="checkbox" id="hiderAddress" name="scales2" checked>
+                    <label for="scales2">Отображать</label>
+                </div>
+                </div>  
+                <button type="submit">Применить</button>
+            </form>
+        </div>
+        <div class="card-result">
+            <div class="card">
+                <div class="card-organization">ООО "Ориентир"</div>
+                <div id='text' class="card-fio">Фёдoров Иван Семенович</div>
+                <div class="card-position">Менеджер по развитию</div>
+                <div class="card-contacts">
+                    <div class="card-phone">8 (999) 123-45-67</div>
+                    <div class="card-email">fedorov.is@orientir.org</div>
+                    <div class="card-address">Иркутск, Байкальская, 421, оф. 12</div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+</body>
+</html>
